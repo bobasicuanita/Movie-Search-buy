@@ -18,8 +18,6 @@ const useBuyMovies = (query, isBuyButtonClicked, cart, dispatch) => {
 
                 const response = await fetch('https://api.mocklets.com/mock68075/', requestOptions).then(res => res.json());
 
-                console.log(response);
-
                 response.success ? dispatch({type: 'SUCCESSFUL_PURCHASE'}) : dispatch({type: 'FAILURE_PURCHASE'})
 
                 dispatch({type: 'PURCHASE_FINISHED'})
