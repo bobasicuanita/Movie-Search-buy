@@ -13,10 +13,12 @@ const useBuyMovies = (query, isBuyButtonClicked, cart, dispatch) => {
                         'X-Mocklets-PublicKey': 'txmovies',
                         'X-Mocklets-Checksum': '830c7cd4a70be6540a4898441ca02951'
                     },
-                    body: JSON.stringify({cart: cart})
+                    body: JSON.stringify({data: {movies: {cart} }})
                 };
 
                 const response = await fetch('https://api.mocklets.com/mock68075/', requestOptions).then(res => res.json());
+
+                console.log(response);
 
                 response.success ? dispatch({type: 'SUCCESSFUL_PURCHASE'}) : dispatch({type: 'FAILURE_PURCHASE'})
 

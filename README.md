@@ -21,6 +21,8 @@ The project's state management was handled with React Hooks and the useReducer H
 
 In the beginning I considered using Redux and Redux Thunk but since the project was not large enough I decided to develop it with the similar useReducer Hook method.
 
+The application is quite responsive on mobile devices.
+
 External Modules Used:
    1) @material-ui/icons 
    2) node-sass
