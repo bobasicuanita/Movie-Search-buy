@@ -1,0 +1,20 @@
+.heading-primary {
+  font-weight: 500;
+}
+
+.heading-secondary {
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.heading-tertiary {
+  margin: 1rem 0;
+
+  &--success {
+    color: #4BB543;
+  }
+
+  &--fail {
+    color: #F32013;
+  }
+}

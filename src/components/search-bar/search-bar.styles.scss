@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--color-primary-dark);
+  border-radius: var(--component-border-radius);
+
+  @include responsive(phone) {
+    padding: 1.5rem;
+  }
+
+  &__search-input {
+    width: 76%;
+    padding: 1rem;
+    background: var(--color-primary-dark);
+    border: 2px solid #b4cded;
+    border-radius: var(--component-border-radius);
+    color: #f0f4ef;
+    outline: none;
+    caret-color: #ccc;
+    margin-right: 1rem;
+    transition: 0.4s;
+
+    @include responsive(phone) {
+      width: 50%;
+    }
+
+    &::placeholder {
+      color: #ccc;
+    }
+
+    & ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.3s;}
+  }
+
+  &__sort-dropdown {
+    width: 24%;
+    background: var(--color-primary-dark);
+    border: 2px solid #b4cded;
+    border-radius: var(--component-border-radius);
+    color: #f0f4ef;
+    padding: 0.9rem;
+    outline: none;
+
+    @include responsive(phone) {
+      width: 50%;
+    }
+  }
+}

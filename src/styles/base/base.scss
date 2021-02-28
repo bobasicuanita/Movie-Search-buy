@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @include responsive(tab-land) { // width < 1200?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include responsive(tab-port) { // width < 900?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include responsive(big-desktop) { // width > 1800?
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--default-font-family);
+  background:var(--dark-black);
+  color: var(--color-primary-light);
+  position: relative;
+}
+
+.not-visible {
+  visibility: hidden;
+  opacity: 0;
+}

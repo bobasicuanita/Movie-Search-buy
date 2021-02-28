@@ -1,0 +1,39 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+@import "styles/base/loading-spinner";
+@import "styles/abstracts/animations";
+@import "styles/base/base";
+@import "styles/base/typography";
+@import "styles/base/buttons";
+@import "components/search-bar/search-bar.styles";
+@import "components/movie-results/movie-results.styles";
+@import "components/cart/cart.styles";
+@import "components/movie-card/movie-card.styles";
+
+.app {
+  margin: 3.5rem;
+  display: flex;
+  min-height: 100vh;
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    @include responsive(tab-land) {
+      width: 100%;
+    }
+
+    .catalog {
+      margin-top: 3.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1.5rem;
+      background-color: var(--color-primary-dark);
+      border-radius: var(--component-border-radius);
+
+      h1 {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
