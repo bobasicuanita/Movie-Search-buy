@@ -7,7 +7,7 @@ const SearchBar = ({handleSearch, handleSort}) => {
                 type="text"
                 className="header__search-input"
                 placeholder="Search your movie..."
-                onChange={e => handleSearch({type: 'SET_QUERY', payload: e.target.value})}
+                onChange={e => handleSearch({type: 'SET_TEMPORARY_QUERY', payload: e.target.value})}
             />
             <select
                 name="sort"

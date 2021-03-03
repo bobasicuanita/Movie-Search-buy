@@ -1,8 +1,6 @@
 import React from 'react';
 
 const CartItem = ({ props: {poster_path, title, release_date}, id, handleRemoveFromCart}) => {
-    // console.log(props);
-    //{ id, poster_path, title, release_date, handleRemoveFromCart}
     return (
         <li key={id} className="cart__list-item">
             <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={poster_path}

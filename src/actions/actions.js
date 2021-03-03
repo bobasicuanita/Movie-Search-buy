@@ -35,3 +35,4 @@ export const handleRemoveFromCart = (cart, payload) => {
 
     return cart;
 }
+

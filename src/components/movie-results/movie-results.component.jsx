@@ -20,6 +20,7 @@ const MovieResults = ({data, toggleCart, cart }) => {
         <Card
             key={item.id}
             title={item.title}
+            rating={item.vote_average}
             id={item.id}
             image={item.poster_path}
             btnText="Add To Cart"
@@ -29,13 +30,14 @@ const MovieResults = ({data, toggleCart, cart }) => {
         <Card
             key={item.id}
             title={item.title}
+            rating={item.vote_average}
             id={item.id}
             image={item.poster_path}
             btnText="Remove From Cart"
             toggleCart={toggleCart}
             dispatchType='REMOVE_FROM_CART'
         />))) : (
-        <h1 className='heading-primary'>No movies where found, please try again.</h1>)
+        <h1 className='heading-primary catalog__error'>No movies where found, please try again.</h1>)
 };
 
 export default MovieResults;
